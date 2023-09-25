@@ -12,8 +12,6 @@ public class ChopStick {
     private boolean iAmFree = true;
     private final int myNumber;
     private final Lock verrou = new ReentrantLock();
-    private final Condition pasPrise = verrou.newCondition();
-    private final Condition pasLache = verrou.newCondition();
 
     public ChopStick() {
         myNumber = ++stickCount;
